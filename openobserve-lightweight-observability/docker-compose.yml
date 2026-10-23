@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  openobserve:
+    image: openobserve/openobserve:v0.12.0
+    container_name: openobserve_lab
+    restart: unless-stopped
+    environment:
+      - ZO_ROOT_USER_EMAIL=admin@example.com
+      - ZO_ROOT_USER_PASSWORD=Admin123456#
+      - ZO_DATA_DIR=/data
+      - ZO_TELEMETRY=false
+    ports:
+      - "5080:5080"
+    volumes:
+      - o2_data:/data
+
+volumes:
+  o2_data:

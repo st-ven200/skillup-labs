@@ -1,0 +1,30 @@
+# Labs 隐私与凭证安全保护规则
+# 严格禁止任何私有密钥、凭证、Token、本地网络日志与真实抓包文件外泄
+
+*.env
+*.env.*
+*.key
+*.pem
+*.pcap
+*.pcapng
+*.cap
+*.log
+credentials*
+*.cookie
+*.cookies
+*.token
+id_rsa*
+*.secret
+*.auth
+
+# 编译与运行时产物
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+node_modules/
+dist/
+build/
+.DS_Store
+Thumbs.db
