@@ -1,0 +1,21 @@
+[tool.ruff]
+# 支持的目标 Python 版本
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+# 启用的高质量规则集
+# E/W: pycodestyle
+# F: Pyflakes
+# B: flake8-bugbear (高危反模式)
+# I: isort (导入自动排序)
+# UP: pyupgrade (现代化语法升级)
+# SIM: flake8-simplify (简化冗余逻辑)
+select = ["E", "F", "B", "I", "UP", "SIM"]
+
+# 忽略特定警告 (如长行宽由 formatter 兜底)
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+known-first-party = ["app"]
